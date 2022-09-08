@@ -53,12 +53,12 @@
 }
 
 .products {
-    width: 300px;
+    width: 350px;
 }
 
 .products .image_section {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 350px;
     position: relative;
 }
 

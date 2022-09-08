@@ -113,6 +113,7 @@ section.hero {
 .featured_container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     width: 100%;
     padding: 2rem 0;
@@ -121,12 +122,12 @@ section.hero {
 }
 
 .products {
-    width: 300px;
+    width: 350px;
 }
 
 .products .image_section {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 350px;
     position: relative;
 }
 
