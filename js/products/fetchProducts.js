@@ -40,8 +40,7 @@ const itemsUrl = baseUrl;
          // filter Function
 
         search.onkeyup = function (event) {
-            console.log(event)
-
+            
             const searchValue = event.target.value.trim().toLowerCase();
 
             const filteredItems = result.filter(function (item) {
@@ -49,8 +48,6 @@ const itemsUrl = baseUrl;
                     return true;
                 }
             })
-
-            console.log(result)
 
             result = filteredItems;
             renderHtml();
