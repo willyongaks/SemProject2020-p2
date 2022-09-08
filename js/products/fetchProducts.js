@@ -6,6 +6,7 @@ const itemsUrl = baseUrl;
 (async function() {
 
     const featuredContainer = document.querySelector(".featured_product_container");
+    const search = document.querySelector(".form-control");
 
     try {
         const response = await fetch(itemsUrl);
@@ -35,10 +36,34 @@ const itemsUrl = baseUrl;
             });
         }
         renderHtml()
+
+         // filter Function
+
+        search.onkeyup = function (event) {
+            console.log(event)
+
+            const searchValue = event.target.value.trim().toLowerCase();
+
+            const filteredItems = result.filter(function (item) {
+                if (item.title.toLowerCase().startsWith(searchValue)) {
+                    return true;
+                }
+            })
+
+            console.log(result)
+
+            result = filteredItems;
+            renderHtml();
+        }
     }
 
     catch (error) {
         console.log(error)
         displayMessage();
     }
+
+
+   
+
+    
 })();
