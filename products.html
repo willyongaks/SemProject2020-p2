@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/14eb33e48f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/product.css">
 </head>
 
 <body>
@@ -54,6 +55,21 @@
     </nav>
     <!-- nav section -->
 
+    <form class="d-flex container w-50">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    </form>
+    
+    <!-- featured products -->
+    
+    <section class="container featured">
+        <div class="featured-title">
+            Featured
+        </div>
+        <div class="container-fluid featured_product_container">
+        </div>
+    </section>
+    <!-- featured products -->
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
@@ -62,6 +78,7 @@
 
 
     <script src="/js/index.js" type="module"></script>
+    <script src="/js/products/fetchProducts.js" type="module"></script>
 </body>
 
 </html>

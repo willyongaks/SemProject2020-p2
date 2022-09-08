@@ -1,14 +1,11 @@
-import { baseUrl } from "./settings/baseUrl.js";
-import { displayMessage } from "./components/displayMessage.js";
-
+import { baseUrl } from "../settings/baseUrl.js";
+import { displayMessage } from "../components/displayMessage.js";
 
 const itemsUrl = baseUrl;
 
+(async function() {
 
-(async function () {
-
-    const featuredContainer = document.querySelector(".featured_container");
-
+    const featuredContainer = document.querySelector(".featured_product_container");
 
     try {
         const response = await fetch(itemsUrl);
@@ -19,9 +16,7 @@ const itemsUrl = baseUrl;
             featuredContainer.innerHTML = "";
 
             result.forEach(function (item) {
-
-                if (item.featured === true) {
-                    featuredContainer.innerHTML += `
+                featuredContainer.innerHTML += `
                     
                     <div class="products">
                         <div class="image_section">
@@ -36,16 +31,14 @@ const itemsUrl = baseUrl;
                             <p>${item.price}</p>
                         </div>
                     </div>`
-                }
+                
             });
         }
         renderHtml()
     }
-    
-    catch (error){
+
+    catch (error) {
         console.log(error)
         displayMessage();
     }
-
-
 })();
