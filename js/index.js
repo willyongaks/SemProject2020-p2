@@ -1,12 +1,16 @@
 import { baseUrl } from "./settings/baseUrl.js";
 import { displayMessage } from "./components/displayMessage.js";
+import { savefavs } from "./localStorage/saveToLocalStorage.js";
+import { getExistingFavs } from "./localStorage/getFromStorage.js";
+import { toggleProducts } from "./products/toggleProducts.js";
 
 
 const itemsUrl = baseUrl;
 
 
-(async function () {
 
+
+(async function () {
     const featuredContainer = document.querySelector(".featured_container");
 
 
@@ -40,6 +44,49 @@ const itemsUrl = baseUrl;
             });
         }
         renderHtml()
+        toggleProducts();
+
+        // // Adding to cart function
+        // const favBtns = document.querySelectorAll(".products i")
+
+        // favBtns.forEach((button) => {
+        //     button.addEventListener("click", handleClick);
+        // })
+
+
+        // function handleClick() {
+        //     this.classList.toggle("bi-cart-fill");
+        //     this.classList.toggle("bi-cart");
+
+
+        //     const id = this.dataset.id;
+        //     const title = this.dataset.title;
+
+        //     const currentFavs = getExistingFavs();
+
+
+
+        //     const productExist = currentFavs.find(function (fav) {
+        //         return fav.id === id;
+
+        //     });
+
+        //     if (productExist === undefined) {
+
+        //         const product = { id: id, title: title };
+        //         currentFavs.push(product);
+        //         savefavs(currentFavs);
+
+        //     }
+        //     else {
+        //         const newfavs = currentFavs.filter(fav => fav.id !== id);
+        //         savefavs(newfavs);
+        //     }
+
+
+        // }
+
+        
     }
     
     catch (error){
