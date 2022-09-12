@@ -124,6 +124,9 @@ section.hero {
 .products {
     width: 350px;
 }
+.product_link{
+    text-decoration: none;
+}
 
 .products .image_section {
     width: 300px;

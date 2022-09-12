@@ -21,9 +21,10 @@ const itemsUrl = baseUrl;
                 featuredContainer.innerHTML += `
                     
                     <div class="products">
+                    <a href="./productDetails.html" class="product_link">
                         <div class="image_section">
                             <img src="http://localhost:4000${item.image.url} ">
-
+                    </a>
                             <div class="product_icons">
                                 <i class="bi bi-cart" data-id=${item.id} data-title=${item.title} data-price=${item.price}></i>
                             </div>
@@ -54,6 +55,8 @@ const itemsUrl = baseUrl;
             result = filteredItems;
             renderHtml();
         }
+
+        
     }
 
     catch (error) {
@@ -61,8 +64,6 @@ const itemsUrl = baseUrl;
         // displayMessage();
     }
 
-
-   
-
+    
     
 })();

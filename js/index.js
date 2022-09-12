@@ -26,18 +26,22 @@ const itemsUrl = baseUrl;
                     featuredContainer.innerHTML += `
                     
                     <div class="products">
+                    <a href="./productDetails.html" class="product_link">
                         <div class="image_section">
                             <img src="http://localhost:4000${item.image.url}">
-
+                        </a>
                             <div class="product_icons">
                                 <i class="bi bi-cart" data-id=${item.id} data-title=${item.title}></i>
                             </div>
                         </div>
+
                         <div class="product_info">
                             <p>${item.title}</p>
                             <p>${item.price}</p>
                         </div>
-                    </div>`
+                    </div>
+                    
+                    `
                 }
             });
         }

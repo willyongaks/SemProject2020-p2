@@ -1,5 +1,5 @@
 import { getExistingFavs } from "../localStorage/getFromStorage.js";
-import { baseUrl } from "../settings/baseUrl.js";
+
 
 const favourites = getExistingFavs();
 console.log(favourites)
