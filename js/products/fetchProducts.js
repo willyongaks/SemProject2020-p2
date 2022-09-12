@@ -1,5 +1,5 @@
 import { baseUrl } from "../settings/baseUrl.js";
-import { displayMessage } from "../components/displayMessage.js";
+// import { displayMessage } from "../components/displayMessage.js";
 import { toggleProducts } from "./toggleProducts.js";
 
 const itemsUrl = baseUrl;
@@ -22,10 +22,10 @@ const itemsUrl = baseUrl;
                     
                     <div class="products">
                         <div class="image_section">
-                            <img src="http://localhost:4000${item.image.url}">
+                            <img src="http://localhost:4000${item.image.url} ">
 
                             <div class="product_icons">
-                                <i class="bi bi-cart" data-id=${item.id} data-title=${item.title}></i>
+                                <i class="bi bi-cart" data-id=${item.id} data-title=${item.title} data-price=${item.price}></i>
                             </div>
                         </div>
                         <div class="product_info">
@@ -58,7 +58,7 @@ const itemsUrl = baseUrl;
 
     catch (error) {
         console.log(error)
-        displayMessage();
+        // displayMessage();
     }
 
 
