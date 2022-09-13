@@ -14,6 +14,7 @@
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/14eb33e48f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/logIn.css">
 
     
 </head>
@@ -55,62 +56,36 @@
     </nav>
     <!-- nav section -->
 
-    <nav class="nav nav-pills nav-justified">
-        <a class="nav-item nav-link active" href="#login">logIn</a>
-        <a class="nav-item nav-link" href="#pills-register">Register</a>
-
-    </nav>
-
-    <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
-
-        <form class="contact_container">
-
-            <div class="left_side" id="register">
-                <div class="row_sec">
-
-                    <div class="input_group">
-                        <label for="name"> Name</label>
-                        <input type="text" class="fname" name="firstname">
-                        <div class="firstName_error">Pleas enter first name</div>
-                    </div>
-
-                    <div class="input_group">
-                        <label for="lname"> Last Name</label>
-                        <input type="text" class="lname" name="lastname">
-                        <div class="lastName_error">Pleas enter last name</div>
-
-                    </div>
+    <section class="form my-4 mx-5">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-lg-5 form_image">
+                    
                 </div>
-
-
-                <div class="input_group">
-                    <label for="email"> Email</label>
-                    <input type="email" class="email" id="email">
-                    <div class="email_error">Pleas enter email</div>
-
+                <div class="col-lg-7 px-5 pt-5">
+                    <h1 class="py-3">logIn</h1>
+                    <h4>Sign into your acount</h4>
+                    <form>
+                        <div class="form_row">
+                            <div class="col-lg-7">
+                                <input type="email" placeholder="type your email" class="form-control my-3 p-4">
+                            </div>
+                        </div>
+                        <div class="form_row">
+                            <div class="col-lg-7">
+                                <input type="password" placeholder="type your password" class="form-control my-3 p-4">
+                            </div>
+                        </div>
+                        <div class="form_row">
+                            <div class="col-lg-7">
+                                <button type="button" class="login_Btn mt-3 mb-5">logIn</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-
-                <div class="input_group">
-                    <label for="email"> Subject</label>
-                    <input type="text" class="subject">
-                    <div class="subject_error">Pleas enter more than 15 charachters</div>
-
-                </div>
-
-                <div class="input_group">
-                    <label for="message" class="txt_area">Message</label>
-                    <textarea name="message" class="message" id="message" rows="8"></textarea>
-                    <div class="message_erro">Pleas enter more than 25 charachters</div>
-
-                </div>
-
-
-                <button>submit</button>
             </div>
-
-        </form>
-    </div>
-
+        </div>
+    </section>
 
 
 
