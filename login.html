@@ -35,7 +35,7 @@
                         <a class="nav-link" href="/products.html">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        <a class="nav-link" href="/login.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                 fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
                                 <path fill-rule="evenodd"
@@ -65,20 +65,30 @@
                 <div class="col-lg-6 pt-5">
                     <h1 class="py-3">logIn</h1>
                     <h4>Sign into your acount</h4>
+                    <div class="message-container mb-2"></div>
                     <form>
+                        
                         <div class="form_row">
                             <div class="col-lg-7">
-                                <input type="email" placeholder="type your email" class="form-control my-3 p-4">
+                                <label class="mt-3">
+                                    Email
+                                    <input type="email" id="email" placeholder="type your email" class="form-control mb-3 p-4">
+                                </label>
+                                
                             </div>
                         </div>
                         <div class="form_row">
                             <div class="col-lg-7">
-                                <input type="password" placeholder="type your password" class="form-control my-3 p-4">
+                                <label class="mt-3">
+                                    Password
+                                    <input type="password" id="password" placeholder="type your password" class="form-control mb-3 p-4">
+                                </label>
+                                
                             </div>
                         </div>
                         <div class="form_row">
                             <div class="col-lg-7">
-                                <button type="button" class="login_Btn mt-3 mb-5">logIn</button>
+                                <button class="login_Btn mt-3 mb-5">logIn</button>
                             </div>
                         </div>
                     </form>
@@ -98,8 +108,7 @@
         crossorigin="anonymous"></script>
 
 
-    <script src="/js/index.js" type="module"></script>
-    <script src="/js/settings/logIn.js" type="module"></script>
+    <script src="/js/logIn.js" type="module"></script>
 </body>
 
 </html>
