@@ -1,4 +1,5 @@
 import { getExistingFavs } from "../localStorage/getFromStorage.js";
+import { cartFunction } from "../settings/cartFunction.js"; 
 
 
 const favourites = getExistingFavs();
@@ -10,12 +11,14 @@ console.log(favourites)
 const featuredContainer = document.querySelector(".cart_container");
 
 
+featuredContainer.innerHTML += ` <div class="cart_header">
+            <h4>Shopping cart</h4>
+        </div> `
+
+
 favourites.forEach(item => {
     featuredContainer.innerHTML += `
     
-    <div class="cart_header">
-            <h4>Shopping cart</h4>
-        </div>
         <div class="cart_products">
             <div class="cart_row">
                 <div class="product_image">
@@ -34,6 +37,13 @@ favourites.forEach(item => {
             </div>
         </div>
     
+        
+    `
+    
+});
+
+    featuredContainer.innerHTML +=
+     ` 
         <hr>
             <div class="product_checkout">
                 <div class="products_total">
@@ -45,5 +55,6 @@ favourites.forEach(item => {
                 <button class="checkout_btn">Checkout</button>
             </div>
     `
-    
-});
+
+cartFunction()
+
