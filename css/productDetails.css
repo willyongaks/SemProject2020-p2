@@ -1,0 +1,12 @@
+
+
+.product_info{
+    width: 100vw;
+    display: flex;
+}
+
+img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
