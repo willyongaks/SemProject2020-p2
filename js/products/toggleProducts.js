@@ -21,6 +21,10 @@ export function toggleProducts() {
         const id = this.dataset.id;
         const title = this.dataset.title;
         const price = this.dataset.price;
+        const image = this.dataset.image;
+
+        console.log(this.dataset)
+        console.log("here")
 
         const currentFavs = getExistingFavs();
 
@@ -33,7 +37,7 @@ export function toggleProducts() {
 
         if (productExist === undefined) {
 
-            const product = { id: id, title: title, price: price};
+            const product = { id: id, title: title, price: price, image: image};
             currentFavs.push(product);
             savefavs(currentFavs);
 

@@ -1,3 +1,4 @@
+import { savefavs } from "../localStorage/saveToLocalStorage.js";
 export function cartFunction() {
 
     if (document.readyState == "loading") {
@@ -30,7 +31,15 @@ export function cartFunction() {
     function removeCartProducts(event) {
         const buttonclicked = event.target
         buttonclicked.parentElement.parentElement.parentElement.remove()
+        const item = JSON.parse(localStorage.getItem("favourites"))
+        const id = event.target.getAttribute("data-id")
+
+        const itemIndex = item.findIndex(x => x.id == id) 
+        item.splice(itemIndex, 1)
+        localStorage.setItem("favourites", JSON.stringify(item))
+        console.log(item)
         updateCartTotal()
+
 
     }
 

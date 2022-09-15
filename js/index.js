@@ -21,7 +21,7 @@ const itemsUrl = baseUrl;
             featuredContainer.innerHTML = "";
 
             result.forEach(function (item) {
-
+                console.log(item.image.url)
                 if (item.featured === true) {
                     featuredContainer.innerHTML += `
                     
@@ -31,7 +31,7 @@ const itemsUrl = baseUrl;
                             <img src="http://localhost:4000${item.image.url}">
                         </a>
                             <div class="product_icons">
-                                <i class="bi bi-cart" data-id=${item.id} data-title=${item.title}></i>
+                                <i class="bi bi-cart" data-id=${item.id} data-title=${item.title} data-image=${item.image.url} data-price=${item.price}></i>
                             </div>
                         </div>
 

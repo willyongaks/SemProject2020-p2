@@ -1,6 +1,6 @@
 import { url } from "./settings/baseUrl.js";
 import { displayMessage } from "./components/logErrorMessage.js";
-
+import { saveToken, saveUser } from "./localStorage/loginStorage.js";
 
 const form = document.querySelector("form")
 const username = document.querySelector("#email")
@@ -24,33 +24,43 @@ function submitForm(event) {
     }
 
     doLogin(emailValue, passwordValue);
+
 }
 
 async function doLogin() {
-    const link = url + "/auth/local";
+    console.log(username.value)
+    const link = url + "auth/local";
 
-    const data = JSON.stringify({ identifier: username, password: password });
+    const formData = JSON.stringify({ identifier: username.value, password: password.value });
 
-    const options = {
-        method: "POST",
-        body: data,
-        headers: {
+    const options = { 
+        method: 'POST', 
+        body: formData, 
+        headers: { 
             "Content-Type": "application/json",
         },
-    };
+    }
+  
 
     try {
-        const response = await fetch(link,options);
+        const response = await fetch(link, options);
         const json = await response.json();
         console.log(json);
 
-        // if (json.user) {
-        //     displayMessage("success", "Successfully logged in", ".message-container");
-        // }
+    
 
-        // if (json.error) {
-        //     displayMessage("warning", "Invalid login details", ".message-container");
-        // }
+        if (json.user) {
+            displayMessage("success", "Successfully logged in", ".message-container");
+
+            saveToken(json.jwt);
+            saveUser(json.jwt)
+
+            window.location.replace("http://127.0.0.1:5501/index.html")
+        }
+
+        if (json.error) {
+            displayMessage("warning", "Invalid login details", ".message-container");
+        }
         
     } 
     catch (error) {

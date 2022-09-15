@@ -55,7 +55,7 @@ const itemsUrl = baseUrl;
             result = filteredItems;
             renderHtml();
         }
-
+        
         
     }
 
