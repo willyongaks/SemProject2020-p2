@@ -2,9 +2,7 @@ import { baseUrl } from "./settings/baseUrl.js";
 // import { displayMessage } from "./components/displayMessage.js";
 import { toggleProducts } from "./products/toggleProducts.js";
 
-
 const itemsUrl = baseUrl;
-
 
 
 
@@ -26,7 +24,7 @@ const itemsUrl = baseUrl;
                     featuredContainer.innerHTML += `
                     
                     <div class="products">
-                    <a href="./productDetails.html" class="product_link">
+                     <a href="./productDetails.html?id=${item.id}" class="product_link">
                         <div class="image_section">
                             <img src="http://localhost:4000${item.image.url}">
                         </a>
