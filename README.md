@@ -12,35 +12,38 @@ Products page --> Done
 
 The products page must include:
 
-A list of all products added to Strapi. Each product must display its title, price and image. The product should link to its products detail page.
+<!-- A list of all products added to Strapi. Each product must display its title, price and image. The product should link to its products detail page. -->Done
 
 <!-- A search text box. When searching (filtering), only the products that include the searched text in their title or description should be listed. --> Done
 
 
 Product details page
 
-This page is reached by a user clicking on a product on the product list page. The product details page must include:
+<!-- This page is reached by a user clicking on a product on the product list page. The product details page must include:
 
 title
 description
 image
 price
 
-an add to cart button. This will toggle the product in and out of a cart array stored in local storage.
+an add to cart button. This will toggle the product in and out of a cart array stored in local storage. --> Done
 
 
 Cart/Basket page
-The cart/basket page must display a list of all products added to the cart. Load the items that have been added to local storage and display them on the page. If the cart is empty display a message indicating this.
+<!-- The cart/basket page must display a list of all products added to the cart. Load the items that have been added to local storage and display them on the page. If the cart is empty display a message indicating this.
 
 Each product in the cart must display:
 
 title
-price
+price --> 
 a link to the product view page
-image
-After the list of products, display the total price of all the products in the cart.
+<!-- image
+After the list of products, display the total price of all the products in the cart. --> Done
 
 <!-- Note: the cart page is not a checkout page. No payments or user details are required to be taken. -->
+
+
+
 
 Admin section
 The admin section (apart from the log in form) must only be accessible to logged in admin users and must include the following features.

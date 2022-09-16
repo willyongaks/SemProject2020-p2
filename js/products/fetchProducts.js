@@ -26,7 +26,7 @@ const itemsUrl = baseUrl;
                             <img src="http://localhost:4000${item.image.url} ">
                     </a>
                             <div class="product_icons">
-                                <i class="bi bi-cart" data-id=${item.id} data-title=${item.title} data-price=${item.price}></i>
+                                <i class="bi bi-cart" data-id=${item.id} data-title=${item.title} data-image=${item.image.url} data-price=${item.price}></i>
                             </div>
                         </div>
                         <div class="product_info">
