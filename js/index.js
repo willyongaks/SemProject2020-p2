@@ -8,6 +8,7 @@ const itemsUrl = baseUrl;
 
 (async function () {
     const featuredContainer = document.querySelector(".featured_container");
+    const heroContainer = document.querySelector(".hero-image");
 
 
     try {
@@ -15,6 +16,8 @@ const itemsUrl = baseUrl;
         let result = await response.json();
 
         function renderHtml() {
+
+            heroContainer.innerHTML += `<img src="/images/small_revolt_164_6w_VE_Hf_I_unsplash_a283fe5ce0.jpg" alt="Red nike shoes">`
 
             featuredContainer.innerHTML = "";
 
