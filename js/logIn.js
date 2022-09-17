@@ -2,10 +2,12 @@ import { url } from "./settings/baseUrl.js";
 import { displayMessage } from "./components/logErrorMessage.js";
 import { saveToken, saveUser } from "./localStorage/loginStorage.js";
 
+
 const form = document.querySelector("form")
 const username = document.querySelector("#email")
 const password = document.querySelector("#password")
 const message = document.querySelector(".message-container")
+
 
 
 form.addEventListener("submit", submitForm);
@@ -53,7 +55,7 @@ async function doLogin() {
             displayMessage("success", "Successfully logged in", ".message-container");
 
             saveToken(json.jwt);
-            saveUser(json.jwt)
+            saveUser(json.user)
 
             window.location.replace("http://127.0.0.1:5501/admin.html")
         }
