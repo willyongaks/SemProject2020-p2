@@ -59,6 +59,9 @@ i {
     background-color: var(--primary-color);
 }
 
+.btn:hover {
+    background-color: var(--secondary-color);
+}
 
 section.hero {
     margin: 1rem 0;
