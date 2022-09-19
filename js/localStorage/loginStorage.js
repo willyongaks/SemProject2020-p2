@@ -22,6 +22,10 @@ export function getUserName() {
     return null;
 }
 
+export function clearStorage() {
+    localStorage.clear();
+}
+
 
 
 
