@@ -28,9 +28,10 @@ function updateNav() {
                     <li class="nav-item">
                         <a class="nav-link" href="/products.html">${authLink}</a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="/edit.html">Edit Products</a>
-                    </li>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    
 
                     <li class="nav-item">
                     <a class="nav-link" href="cart.html"><svg xmlns="http://www.w3.org/2000/svg" width="16"

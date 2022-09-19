@@ -6,7 +6,6 @@ export function logOutButton() {
 
     if(button){
         button.onclick = function() {
-            console.log(event)
             const doLogOut = confirm("Are you sure");
 
             if(doLogOut) {
