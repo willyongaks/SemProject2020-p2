@@ -56,7 +56,6 @@ i {
 
 .nav-link .active {
     color: var(--primary-color);
-    background-color: var(--primary-color);
 }
 
 .btn:hover {

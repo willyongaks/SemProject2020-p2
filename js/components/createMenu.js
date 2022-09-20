@@ -8,10 +8,18 @@ export function createMenu() {
 
     const username = getUserName();
 
-    let authLink = `<a href="login.html" class="${pathname === "/login.html" ? "active" : ""}">Login</a>`;
+    let authLink = `<li class="nav-item">
+                                        <a class="nav-link " href="/login.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-person-circle ${pathname === "/login.html" ? "active" : ""}" viewBox="0 0 16 16">
+                                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                            <path fill-rule="evenodd"
+                                                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                        </svg><span></span></a>
+                                    </li>`
 
     if (username) {
-        authLink = ``
+        authLink = `<a href="add.html" class="${pathname === "/add.html" ? "active" : ""}">Add Product</a>
+                    <span>Hi ${username}</span>`
     }
 
 
@@ -27,9 +35,7 @@ export function createMenu() {
                                     <li class="nav-item">
                                         <a class="nav-link" href="/products.html">Products</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="/login.html"><span>Hi ${username}</span></a>
-                                    </li>
+                                    ${authLink}
                                     <li class="nav-item">
                                         <a class="nav-link" href="cart.html"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                                             height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
