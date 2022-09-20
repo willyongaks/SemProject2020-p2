@@ -1,5 +1,4 @@
 import { baseUrl } from "../settings/baseUrl.js";
-// import { displayMessage } from "../components/displayMessage.js";
 import { toggleProducts } from "./toggleProducts.js";
 
 const itemsUrl = baseUrl;
