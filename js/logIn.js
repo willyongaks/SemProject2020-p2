@@ -59,7 +59,7 @@ async function doLogin() {
             saveToken(json.jwt);
             saveUser(json.user)
 
-            window.location.replace("http://127.0.0.1:5501/admin.html")
+            window.location.replace("http://127.0.0.1:5501/add.html")
         }
 
         if (json.error) {

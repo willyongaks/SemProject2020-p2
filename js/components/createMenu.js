@@ -25,12 +25,13 @@ export function createMenu() {
         authLink = `<li class="nav-item"><a class="nav-link ${pathname === "/add.html" ? "active" : ""}" href="/add.html">Add Product
                     </a></li>
                     <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle ${pathname === "/add.html" ? "active" : ""}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-           Hi ${username}
-          </a>
-          <ul class="dropdown-menu">
-            <li><button class="log_out_btn">Log Out</button></li>
-          </ul>
+                        <a class="nav-link dropdown-toggle ${pathname === "/add.html" ? "active" : ""}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Hi ${username}
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><button class="log_out_btn">Log Out</button></li>
+                        </ul>
+                    </li>
         `
     }
 
@@ -49,6 +50,7 @@ export function createMenu() {
                                     </li>
                                     
                                     ${authLink}
+                                    
                                     <li class="nav-item">
                                         <a class="nav-link" href="cart.html"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                                             height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
