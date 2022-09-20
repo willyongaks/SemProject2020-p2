@@ -3,8 +3,6 @@ import { toggleProducts } from "./products/toggleProducts.js";
 
 const itemsUrl = baseUrl;
 
-
-
 (async function () {
     const featuredContainer = document.querySelector(".featured_container");
     const heroContainer = document.querySelector(".hero-image");
@@ -46,15 +44,10 @@ const itemsUrl = baseUrl;
             });
         }
         renderHtml()
-        toggleProducts();
-
-        
+        toggleProducts();  
     }
     
     catch (error){
         console.log(error)
-     
     }
-
-
 })();
