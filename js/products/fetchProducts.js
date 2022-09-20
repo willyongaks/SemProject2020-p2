@@ -37,9 +37,6 @@ const itemsUrl = baseUrl;
             });
         }
         
-        
-        
-
          // filter Function
 
         search.onkeyup = function (event) {
@@ -56,20 +53,13 @@ const itemsUrl = baseUrl;
             renderHtml();
         }
 
-        renderHtml()
-
-        
-        
-        
+        renderHtml()   
     }
-
-    
-
     catch (error) {
         console.log(error)
         // displayMessage();
     }
-    
+
     toggleProducts();
     
     
