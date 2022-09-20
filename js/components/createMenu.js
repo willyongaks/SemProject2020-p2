@@ -1,4 +1,8 @@
 import { getUserName } from "../localStorage/loginStorage.js";
+import { logOutButton } from "./logOutBtn.js";
+
+
+
 
 export function createMenu() {
     const { pathname } = document.location;
@@ -18,8 +22,16 @@ export function createMenu() {
                                     </li>`
 
     if (username) {
-        authLink = `<a href="add.html" class="${pathname === "/add.html" ? "active" : ""}">Add Product</a>
-                    <span>Hi ${username}</span>`
+        authLink = `<li class="nav-item"><a class="nav-link ${pathname === "/add.html" ? "active" : ""}" href="/add.html">Add Product
+                    </a></li>
+                    <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle ${pathname === "/add.html" ? "active" : ""}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Hi ${username}
+          </a>
+          <ul class="dropdown-menu">
+            <li><button class="log_out_btn">Log Out</button></li>
+          </ul>
+        `
     }
 
 
@@ -35,6 +47,7 @@ export function createMenu() {
                                     <li class="nav-item">
                                         <a class="nav-link" href="/products.html">Products</a>
                                     </li>
+                                    
                                     ${authLink}
                                     <li class="nav-item">
                                         <a class="nav-link" href="cart.html"><svg xmlns="http://www.w3.org/2000/svg" width="16"
@@ -51,4 +64,5 @@ export function createMenu() {
 
 
 }
+logOutButton();
 

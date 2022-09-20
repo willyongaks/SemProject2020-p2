@@ -26,6 +26,10 @@
 
 }
 
+.nav-link .active {
+    color: var(--primary-color);
+}
+
 .upload{
     width: 300px;
 }

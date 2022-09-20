@@ -30,6 +30,9 @@ body{
     background-color: var(--background-color);
     font-family: 'Poppins',sans-serif;
 }
+.nav-link .active {
+    color: var(--primary-color);
+}
 .row{
     background-color: white;
     border-radius: 30px;

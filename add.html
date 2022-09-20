@@ -23,14 +23,16 @@
     <nav class="navbar navbar-expand-lg container"></nav>
     <!-- nav section -->
 
+
+    <!-- add products -->
     <section class="container">
         <div class="upload">
-            <h4>Edit Products</h4>
-
+            <h4>Apload Products to strapi</h4>
+    
             <form>
-
+    
                 <div class="message-container"></div>
-
+    
                 <div class="mb-3 mt-4">
                     <label for="name">Name</label>
                     <input class="name" />
@@ -43,21 +45,27 @@
                     <label for="description">Description</label>
                     <textarea class="description"></textarea>
                 </div>
-
-
-
-
-
-                <button class="btn_submit">Update</button>
+    
+                <div class="mb-3">
+    
+                    <label for="file">Paste your url here</label>
+                    <input type="url" class="form-control file" aria-label="file example" required>
+                    <div class="invalid-feedback">Example invalid form file feedback</div>
+                </div>
+    
+                <div class="form-check form-switch mt-4">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                    <label class="form-check-label" for="flexSwitchCheckChecked">Featured</label>
+                </div>
+    
+                <button class="btn_submit">Button</button>
             </form>
-
+    
         </div>
-
-
+    
+    
     </section>
-
-
-
+    <!-- end of add products -->
 
 
 
@@ -74,8 +82,8 @@
         crossorigin="anonymous"></script>
 
 
-    <script src="/js/index.js" type="module"></script>
     <script src="/js/add.js" type="module"></script>
+    
 </body>
 
 </html>

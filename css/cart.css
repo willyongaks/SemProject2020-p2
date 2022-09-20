@@ -28,6 +28,10 @@
     --header-5: 24px;
 }
 
+.nav-link .active {
+    color: var(--primary-color);
+}
+
 .cart_header{
     text-align: center;
     padding-bottom: 3em;

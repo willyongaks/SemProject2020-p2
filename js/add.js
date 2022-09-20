@@ -1,6 +1,8 @@
  import { displayMessage } from "./components/logErrorMessage.js";
  import { getToken } from "./localStorage/loginStorage.js";
  import { url } from "./settings/baseUrl.js";
+ import { createMenu } from "./components/createMenu.js";
+ import { logOutButton } from "./components/logOutBtn.js";
 
 const token = getToken(); 
 if(!token) {
@@ -14,6 +16,7 @@ const imageInput = document.querySelector(".file");
 const message = document.querySelector(".message-container");
 
 
+createMenu();
 form.addEventListener("submit", submitForm);
 
 function submitForm(event) {
@@ -66,3 +69,5 @@ async function addProcuct(title, price, description, imageInput) {
 
     }
 }
+
+logOutButton();
