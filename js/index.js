@@ -1,7 +1,10 @@
 import { baseUrl } from "./settings/baseUrl.js";
+import { createMenu } from "./components/createMenu.js";
 import { toggleProducts } from "./products/toggleProducts.js";
 
 const itemsUrl = baseUrl;
+
+createMenu();
 
 (async function () {
     const featuredContainer = document.querySelector(".featured_container");

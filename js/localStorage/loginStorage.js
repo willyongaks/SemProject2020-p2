@@ -37,7 +37,7 @@ function getFromStorage(key) {
     const value = localStorage.getItem(key)
 
     if(!value) {
-        return [];
+        return null;
     }
 
     return JSON.parse(value);

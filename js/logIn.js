@@ -1,13 +1,15 @@
 import { url } from "./settings/baseUrl.js";
 import { displayMessage } from "./components/logErrorMessage.js";
 import { saveToken, saveUser } from "./localStorage/loginStorage.js";
-
+import { createMenu } from "./components/createMenu.js";
 
 const form = document.querySelector("form")
 const username = document.querySelector("#email")
 const password = document.querySelector("#password")
 const message = document.querySelector(".message-container")
 
+
+createMenu();
 
 
 form.addEventListener("submit", submitForm);

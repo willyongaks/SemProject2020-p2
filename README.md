@@ -46,12 +46,12 @@ After the list of products, display the total price of all the products in the c
 
 
 Admin section
-The admin section (apart from the log in form) must only be accessible to logged in admin users and must include the following features.
+<!-- The admin section (apart from the log in form) must only be accessible to logged in admin users and must include the following features. -->
 
 Login/Logout
 Create an admin login form that allows administrator users to login. Use local storage to keep the user logged in.
 
-When logged in, display a logout button in the layout that logs the user out. Logging out should not clear the cart.
+<!-- When logged in, display a logout button in the layout that logs the user out.--> Logging out should not clear the cart. 
 
 Add/edit products
 Create form(s) that allow products to be added and edited. The form must allow the user to toggle whether a product is featured.
@@ -59,8 +59,8 @@ Create form(s) that allow products to be added and edited. The form must allow t
 Product images
 For adding/editing product images use either of these 2 methods:
 
-Use a file upload field to upload images to Strapi,
-You can find the fields for each in Strapi. Use only one to display a product image.
+<!-- Use a file upload field to upload images to Strapi,
+You can find the fields for each in Strapi. Use only one to display a product image. -->
 
 Delete existing product
 Allow products to be deleted. Before a product is deleted you must display a confirmation dialog. The product should only be deleted if the user confirms.

@@ -2,7 +2,10 @@
  import { getToken } from "./localStorage/loginStorage.js";
  import { url } from "./settings/baseUrl.js";
 
-
+const token = getToken(); 
+if(!token) {
+    location.href = "/index.html"
+}
 const form = document.querySelector("form")
 const title = document.querySelector(".name")
 const price = document.querySelector(".price")
@@ -37,7 +40,7 @@ async function addProcuct(title, price, description, imageInput) {
     
 
     const data = JSON.stringify({ title: title, price: price, description: description, image_url: imageInput});
-    const token = getToken();
+    
     
 
 
