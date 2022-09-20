@@ -36,8 +36,9 @@ const itemsUrl = baseUrl;
                 
             });
         }
-        renderHtml()
-        toggleProducts();
+        
+        
+        
 
          // filter Function
 
@@ -54,15 +55,22 @@ const itemsUrl = baseUrl;
             result = filteredItems;
             renderHtml();
         }
+
+        renderHtml()
+
+        
         
         
     }
+
+    
 
     catch (error) {
         console.log(error)
         // displayMessage();
     }
-
+    
+    toggleProducts();
     
     
 })();

@@ -1,5 +1,4 @@
 import { baseUrl } from "./settings/baseUrl.js";
-// import { displayMessage } from "./components/displayMessage.js";
 import { toggleProducts } from "./products/toggleProducts.js";
 
 const itemsUrl = baseUrl;
@@ -22,7 +21,7 @@ const itemsUrl = baseUrl;
             featuredContainer.innerHTML = "";
 
             result.forEach(function (item) {
-                console.log(item.image.url)
+               
                 if (item.featured === true) {
                     featuredContainer.innerHTML += `
                     
@@ -54,7 +53,7 @@ const itemsUrl = baseUrl;
     
     catch (error){
         console.log(error)
-        // displayMessage();
+     
     }
 
 

@@ -2,18 +2,16 @@ import { savefavs } from "../localStorage/saveToLocalStorage.js";
 import { getExistingFavs } from "../localStorage/getFromStorage.js";
 export function toggleProducts() {
 
-
-
-
     // Adding to cart function
     const favBtns = document.querySelectorAll(".products i")
-
+     console.log(favBtns)
     favBtns.forEach((button) => {
         button.addEventListener("click", handleClick);
     })
 
 
-    function handleClick() {
+    function handleClick(event) {
+       
         this.classList.toggle("bi-cart-fill");
         this.classList.toggle("bi-cart");
 
