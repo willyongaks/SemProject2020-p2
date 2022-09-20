@@ -2,6 +2,7 @@ import { getUserName } from "../localStorage/loginStorage.js";
 
 export function createMenu() {
     const { pathname } = document.location;
+    console.log(pathname)
 
     const container = document.querySelector(".navbar");
 
@@ -15,7 +16,7 @@ export function createMenu() {
 
 
     container.innerHTML += `<div class="container-fluid">
-                            <a class="navbar-brand" href="/">Shuzy</a>
+                            <a class="navbar-brand ${pathname === "/" || pathname === "/index.html" ? "active" : ""}" href="/">Shuzy</a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                                 aria-label="Toggle navigation">

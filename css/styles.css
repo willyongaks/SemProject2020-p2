@@ -54,7 +54,7 @@ i {
     font-size: var(--text-medium);
 }
 
-.active {
+.nav-link .active {
     color: var(--primary-color);
     background-color: var(--primary-color);
 }
