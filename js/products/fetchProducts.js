@@ -1,5 +1,6 @@
 import { baseUrl } from "../settings/baseUrl.js";
 import { toggleProducts } from "./toggleProducts.js";
+import { logOutButton } from "../components/logOutBtn.js";
 
 const itemsUrl = baseUrl;
 
@@ -17,15 +18,19 @@ const itemsUrl = baseUrl;
             featuredContainer.innerHTML = "";
 
             result.forEach(function (item) {
+
+                console.log(item)
+                
+                const imageUrl = item.image ? `http://localhost:4000${item.image.url}` : item.image_url;
                 featuredContainer.innerHTML += `
                     
                     <div class="products">
                     <a href="./productDetails.html?id=${item.id}" class="product_link">
                         <div class="image_section">
-                            <img src="http://localhost:4000${item.image.url} ">
+                            <img src="${imageUrl}">
                     </a>
                             <div class="product_icons">
-                                <i class="bi bi-cart" data-id=${item.id} data-title=${item.title} data-image=${item.image.url} data-price=${item.price}></i>
+                                <i class="bi bi-cart" data-id=${item.id} data-title=${item.title} data-image=${imageUrl} data-price=${item.price}></i>
                             </div>
                         </div>
                         <div class="product_info">
@@ -64,3 +69,4 @@ const itemsUrl = baseUrl;
     
     
 })();
+logOutButton();

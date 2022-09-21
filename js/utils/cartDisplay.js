@@ -1,5 +1,6 @@
 import { getExistingFavs } from "../localStorage/getFromStorage.js";
 import { cartFunction } from "../settings/cartFunction.js"; 
+import { logOutButton } from "../components/logOutBtn.js";
 
 
 
@@ -58,5 +59,5 @@ favourites.forEach(item => {
             </div>
     `
 
-cartFunction()
-
+cartFunction();
+logOutButton();

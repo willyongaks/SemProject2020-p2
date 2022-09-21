@@ -1,4 +1,5 @@
 import { baseUrl } from "../settings/baseUrl.js"
+import { createMenu } from "../components/createMenu.js";
 
 
 const queryString = window.location.search;
@@ -14,13 +15,14 @@ async function fetchProductInfo() {
 
     console.log(result)
 
+    const imageUrl = result.image ? `http://localhost:4000${result.image.url}` : result.image_url;
 
     const featuredProductDetails = document.querySelector(".product_info");
 
     featuredProductDetails.innerHTML += `
     
     <div class="product_image col-md-6">
-            <img src="http://localhost:4000${result.image.url}" alt="">
+            <img src="${imageUrl}">
         </div>
         <div class="product_text col-md-6 py-5">
             <div class="product_title">
@@ -37,3 +39,4 @@ async function fetchProductInfo() {
 
 }
 fetchProductInfo()
+createMenu();

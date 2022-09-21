@@ -1,5 +1,6 @@
 import { savefavs } from "../localStorage/saveToLocalStorage.js";
 import { getExistingFavs } from "../localStorage/getFromStorage.js";
+import { logOutButton } from "../components/logOutBtn.js";
 export function toggleProducts() {
 
     // Adding to cart function
@@ -48,3 +49,4 @@ export function toggleProducts() {
 
     }
 }
+logOutButton();

@@ -39,7 +39,7 @@ function submitForm(event) {
 async function addProcuct(title, price, description, imageInput) {
     const linkUrl = url + "products";
 
-    const formData = new FormData();
+    // const formData = new FormData();
     
 
     const data = JSON.stringify({ title: title, price: price, description: description, image_url: imageInput});

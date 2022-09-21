@@ -1,6 +1,7 @@
 import { baseUrl } from "./settings/baseUrl.js";
 import { createMenu } from "./components/createMenu.js";
 import { toggleProducts } from "./products/toggleProducts.js";
+import { logOutButton } from "./components/logOutBtn.js";
 
 const itemsUrl = baseUrl;
 
@@ -54,3 +55,5 @@ createMenu();
         console.log(error)
     }
 })();
+
+logOutButton();
