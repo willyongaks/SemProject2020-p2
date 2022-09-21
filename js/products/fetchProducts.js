@@ -2,6 +2,7 @@ import { baseUrl } from "../settings/baseUrl.js";
 import { toggleProducts } from "./toggleProducts.js";
 import { logOutButton } from "../components/logOutBtn.js";
 
+
 const itemsUrl = baseUrl;
 
 (async function() {
@@ -19,7 +20,8 @@ const itemsUrl = baseUrl;
 
             result.forEach(function (item) {
 
-                console.log(item)
+                // console.log(item)
+
                 
                 const imageUrl = item.image ? `http://localhost:4000${item.image.url}` : item.image_url;
                 featuredContainer.innerHTML += `
