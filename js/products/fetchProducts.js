@@ -10,22 +10,22 @@ const itemsUrl = baseUrl;
 export async function renderHtml() {
 
     const featuredContainer = document.querySelector(".featured_product_container");
-    
+
 
     try {
         const response = await fetch(itemsUrl);
         let result = await response.json();
 
-     console.log(result)
+        console.log(result)
         featuredContainer.innerHTML = "";
 
         result.forEach(function (item) {
 
-        
-        const imageUrl = item.image ? `http://localhost:4000${item.image.url}` : item.image_url;
 
-        
-        featuredContainer.innerHTML += `
+            const imageUrl = item.image ? `http://localhost:4000${item.image.url}` : item.image_url;
+
+
+            featuredContainer.innerHTML += `
                     
             <div class="products">
                 <a href="./productDetails.html?id=${item.id}" class="product_link">
@@ -39,7 +39,7 @@ export async function renderHtml() {
                     <p>${item.price}</p>
                 </div>
             </div>`
-                
+
         });
         filteredProducts(result);
         toggleProducts();
@@ -48,10 +48,10 @@ export async function renderHtml() {
         console.log(error)
         // displayMessage();
     }
-    
-    
-    
-    
+
+
+
+
 };
 renderHtml();
 logOutButton();

@@ -1,13 +1,10 @@
 import { getExistingFavs } from "../localStorage/getFromStorage.js";
-import { cartFunction } from "../settings/cartFunction.js"; 
+import { cartFunction } from "../settings/cartFunction.js";
 import { logOutButton } from "../components/logOutBtn.js";
 
 
 
 const favourites = getExistingFavs();
-console.log(favourites)
-
-
 
 
 const featuredContainer = document.querySelector(".cart_container");
@@ -19,8 +16,6 @@ featuredContainer.innerHTML += ` <div class="cart_header">
 
 
 favourites.forEach((item) => {
-
-    
     console.log(item)
 
     featuredContainer.innerHTML += `
@@ -45,11 +40,11 @@ favourites.forEach((item) => {
     
         
     `
-    
+
 });
 
-    featuredContainer.innerHTML +=
-     ` 
+featuredContainer.innerHTML +=
+    ` 
         <hr>
             <div class="product_checkout">
                 <div class="products_total">

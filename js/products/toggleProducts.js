@@ -7,17 +7,17 @@ export function toggleProducts() {
 
     // Adding to cart function
     const favBtns = document.querySelectorAll(".products i")
-     
+
     favBtns.forEach((button) => {
         button.addEventListener("click", handleClick);
     })
 
 
     function handleClick(event) {
-       
+
         this.classList.toggle("bi-cart-fill");
         this.classList.toggle("bi-cart");
-        
+
 
         const id = this.dataset.id;
         const title = this.dataset.title;
@@ -37,7 +37,7 @@ export function toggleProducts() {
 
         if (productExist === undefined) {
 
-            const product = { id: id, title: title, price: price, image: image};
+            const product = { id: id, title: title, price: price, image: image };
             currentFavs.push(product);
             savefavs(currentFavs);
 
