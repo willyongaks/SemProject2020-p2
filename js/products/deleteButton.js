@@ -32,8 +32,6 @@ export function deleteButton(id) {
                 const json = await response.json();
 
                 location.href = "/";
-            
-                console.log(json)
 
             }
             catch(error){

@@ -4,7 +4,7 @@ import { renderHtml } from "./fetchProducts.js";
 
 export function filteredProducts(result) {
 
-    
+    renderHtml();
 
     const search = document.querySelector(".form-control");
 
@@ -26,4 +26,4 @@ export function filteredProducts(result) {
 
     }
 }
- renderHtml();
+ 

@@ -7,7 +7,6 @@ import { filteredProducts } from "./filterProducts.js";
 const itemsUrl = baseUrl;
 
 
-
 export async function renderHtml() {
 
     const featuredContainer = document.querySelector(".featured_product_container");
@@ -17,13 +16,15 @@ export async function renderHtml() {
         const response = await fetch(itemsUrl);
         let result = await response.json();
 
-
+     console.log(result)
         featuredContainer.innerHTML = "";
 
         result.forEach(function (item) {
 
-        // console.log(item)
+        
         const imageUrl = item.image ? `http://localhost:4000${item.image.url}` : item.image_url;
+
+        
         featuredContainer.innerHTML += `
                     
             <div class="products">
@@ -41,14 +42,14 @@ export async function renderHtml() {
                 
         });
         filteredProducts(result);
-        
+        toggleProducts();
     }
     catch (error) {
         console.log(error)
         // displayMessage();
     }
     
-    toggleProducts();
+    
     
     
 };

@@ -18,14 +18,17 @@ featuredContainer.innerHTML += ` <div class="cart_header">
         </div> `
 
 
-favourites.forEach(item => {
+favourites.forEach((item) => {
+
+    
     console.log(item)
+
     featuredContainer.innerHTML += `
     
         <div class="cart_products">
             <div class="cart_row">
                 <div class="product_image">
-                    <img src="http://localhost:4000${item.image}">
+                    <img src="${item.image}">
                 </div>
                 <div class="product_description">
                     <p class="title">${item.title}</p>

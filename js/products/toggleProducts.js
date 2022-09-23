@@ -1,6 +1,8 @@
 import { savefavs } from "../localStorage/saveToLocalStorage.js";
 import { getExistingFavs } from "../localStorage/getFromStorage.js";
 import { logOutButton } from "../components/logOutBtn.js";
+
+
 export function toggleProducts() {
 
     // Adding to cart function
@@ -15,14 +17,14 @@ export function toggleProducts() {
        
         this.classList.toggle("bi-cart-fill");
         this.classList.toggle("bi-cart");
-
+        
 
         const id = this.dataset.id;
         const title = this.dataset.title;
         const price = this.dataset.price;
         const image = this.dataset.image;
 
-        // console.log(this.dataset)
+        console.log(this.dataset)
 
         const currentFavs = getExistingFavs();
 

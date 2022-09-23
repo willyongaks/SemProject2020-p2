@@ -51,21 +51,20 @@ Admin section
 
 Login/Logout
 <!-- Create an admin login form that allows administrator users to login.--> Done
-Use local storage to keep the user logged in. 
+<!-- Use local storage to keep the user logged in.  --> Done
 
 <!-- When logged in, display a logout button in the layout that logs the user out.--> Done
 Logging out should not clear the cart. 
 
 Add/edit products
 <!-- Create form(s) that allow products to be added --> Done
- and edited. 
+ <!-- and edited.  --> Done
  The form must allow the user to toggle whether a product is featured. 
 
 Product images
-For adding/editing product images use either of these 2 methods:
-
+<!-- For adding/editing product images use either of these 2 methods: -->
 <!-- Use a file upload field to upload images to Strapi,
 You can find the fields for each in Strapi. Use only one to display a product image. --> Done
 
 Delete existing product
-Allow products to be deleted. Before a product is deleted you must display a confirmation dialog. The product should only be deleted if the user confirms.
+<!-- Allow products to be deleted. Before a product is deleted you must display a confirmation dialog. The product should only be deleted if the user confirms. --> Done
