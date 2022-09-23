@@ -1,41 +1,45 @@
 import { baseUrl } from "../settings/baseUrl.js";
 import { getToken } from "../localStorage/loginStorage.js";
 
-export function deleteButton() {
+export function deleteButton(id) {
 
     const container = document.querySelector(".delete_container");
 
-    container.innerHTML += ` <button type="button" class="delete"></button>`
+    container.innerHTML += ` <button type="button" class="delete_btn">Delete</button>`
     
-    // const button = document.querySelector("button.delete");
+    const button = document.querySelector("button.delete_btn");
 
-    // button.onclick = async function() {
+    button.onclick = async function() {
 
-    //     const deleteItem = confirm( "Delete this product?");
+        console.log(id)
 
-    //     if(deleteItem) {
-    //         const url = baseUrl + "/" + id;
+        const deleteItem = confirm( "Delete this product item from the list?");
 
-    //         const token = getToken();
+        if(deleteItem) {
+            const url = baseUrl + "/" + id;
 
-    //         const options = {
-    //             method: "DELETE",
-    //             Headers: {
-    //                 Authorization: `Baerer ${token}`,
-    //             },
-    //         };
+            const token = getToken();
 
-    //         try{
-    //             const response = await fetch(url, options);
-    //             const json = await response.json();
+            const options = {
+                method: "DELETE",
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                },
+            };
 
-    //             location.href = "/";
+            try{
+                const response = await fetch(url, options);
+                const json = await response.json();
 
-    //         }
-    //         catch(error){
-    //             console.log(error)
-    //         }
+                location.href = "/";
+            
+                console.log(json)
+
+            }
+            catch(error){
+                
+            }
         
-    //     }
-    // };
+        }
+    };
 }

@@ -1,6 +1,8 @@
 import { url } from "./settings/baseUrl.js"
 import { getToken } from "./localStorage/loginStorage.js";
 import { createMenu } from "./components/createMenu.js";
+import { displayMessage} from "./components/logErrorMessage.js"
+import { deleteButton} from "./products/deleteButton.js"
 
 
 createMenu();
@@ -36,7 +38,9 @@ const message = document.querySelector(".message-container");
         price.value = result.price;
         description.value = result.description;
         idInput.value = result.id;
-        imageInput.value = result.image_url
+        imageInput.value = result.image_url;
+
+        deleteButton(result.id);
 
     }
     catch(error){
@@ -92,7 +96,7 @@ async function updateProduct(title, price, description, imageInput) {
         console.log(json);
 
         if (json.updated_at) {
-            displayMessage("success", "Product updated", ".message-container");
+            displayMessage("success", "Product successfully updated", ".message-container");
         }
 
         if (json.error) {

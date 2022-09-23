@@ -26,6 +26,10 @@
 
 }
 
+form{
+    height: 100vh;
+}
+
 .nav-link .active {
     color: var(--primary-color);
 }
@@ -50,9 +54,6 @@ textarea {
     color: var(--background-color);
     border: none;
     cursor: pointer;
-}
-.delete{
-    background: darkgreen;
 }
 
 .message-container {
