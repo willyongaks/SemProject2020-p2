@@ -6,6 +6,10 @@ const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
+console.log(id)
+
+
+
 const url = `${ baseUrl }/${id}`;
 
 
@@ -13,15 +17,14 @@ async function fetchProductInfo() {
     const response = await fetch(url);
     const result = await response.json();
 
-    console.log(result)
-
     const imageUrl = result.image ? `http://localhost:4000${result.image.url}` : result.image_url;
 
     const featuredProductDetails = document.querySelector(".product_info");
 
     featuredProductDetails.innerHTML += `
+    <div class="product_details">
     
-    <div class="product_image col-md-6">
+        <div class="product_image col-md-6">
             <img src="${imageUrl}">
         </div>
         <div class="product_text col-md-6 py-5">
@@ -32,9 +35,16 @@ async function fetchProductInfo() {
                 ${result.description}
             </div>
             <div class="product_price mt-2">
-                ${result.price}
+                Price ${result.price}
             </div>
+            
         </div>
+        <a class="edit_link" href="edit.html?id=${result.id}">Edit products</a>
+    
+    </div>
+        
+
+        
         `
 
 }

@@ -16,6 +16,7 @@
     <script src="https://kit.fontawesome.com/14eb33e48f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/admin.css">
+    <link rel="stylesheet" href="/css/edit.css">
 </head>
 
 <body>
@@ -45,14 +46,21 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="id">Id</label>
-                    <input class="id" type=""></input>
+                    <!-- <label for="id">Id</label> -->
+                    <input class="id" type="hidden"/>
+                </div>
+                <div class="mb-3">
+                
+                    <label for="file">Paste new url here</label>
+                    <input type="url" class="form-control file" aria-label="file example" required>
+                    <div class="invalid-feedback">Example invalid form file feedback</div>
                 </div>
 
                 <button class="btn_submit">Update</button>
 
                 <hr>
                 <div class="delete_container"></div>
+                
             </form>
 
         </div>

@@ -52,7 +52,7 @@ createMenu();
     }
     
     catch (error){
-        console.log(error)
+     
     }
 })();
 

@@ -5,37 +5,37 @@ export function deleteButton() {
 
     const container = document.querySelector(".delete_container");
 
-    container.innerHTML += ` <button type="button" class="delete_btn">Delete</button>`
+    container.innerHTML += ` <button type="button" class="delete"></button>`
     
-    const button = document.querySelector("button.delete");
+    // const button = document.querySelector("button.delete");
 
-    button.onclick = async function() {
+    // button.onclick = async function() {
 
-        const deleteItem = confirm( "Delete this product?");
+    //     const deleteItem = confirm( "Delete this product?");
 
-        if(deleteItem) {
-            const url = baseUrl + "/" + id;
+    //     if(deleteItem) {
+    //         const url = baseUrl + "/" + id;
 
-            const token = getToken();
+    //         const token = getToken();
 
-            const options = {
-                method: "DELETE",
-                Headers: {
-                    Authorization: `Baerer ${token}`,
-                },
-            };
+    //         const options = {
+    //             method: "DELETE",
+    //             Headers: {
+    //                 Authorization: `Baerer ${token}`,
+    //             },
+    //         };
 
-            try{
-                const response = await fetch(url, options);
-                const json = await response.json();
+    //         try{
+    //             const response = await fetch(url, options);
+    //             const json = await response.json();
 
-                location.href = "/";
+    //             location.href = "/";
 
-            }
-            catch(error){
-                console.log(error)
-            }
+    //         }
+    //         catch(error){
+    //             console.log(error)
+    //         }
         
-        }
-    };
+    //     }
+    // };
 }

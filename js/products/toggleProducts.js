@@ -5,7 +5,7 @@ export function toggleProducts() {
 
     // Adding to cart function
     const favBtns = document.querySelectorAll(".products i")
-     console.log(favBtns)
+     
     favBtns.forEach((button) => {
         button.addEventListener("click", handleClick);
     })
@@ -22,8 +22,7 @@ export function toggleProducts() {
         const price = this.dataset.price;
         const image = this.dataset.image;
 
-        console.log(this.dataset)
-        console.log("here")
+        // console.log(this.dataset)
 
         const currentFavs = getExistingFavs();
 
