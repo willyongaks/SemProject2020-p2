@@ -4,7 +4,7 @@ import { logOutButton } from "../components/logOutBtn.js";
 import { filteredProducts } from "./filterProducts.js";
 
 
-const itemsUrl = baseUrl;
+const itemsUrl = baseUrl + "products";
 
 
 export async function renderHtml() {

@@ -1,4 +1,4 @@
-import { url } from "./settings/baseUrl.js"
+import { baseUrl } from "./settings/baseUrl.js"
 import { getToken } from "./localStorage/loginStorage.js";
 import { createMenu } from "./components/createMenu.js";
 import { displayMessage} from "./components/logErrorMessage.js"
@@ -16,7 +16,7 @@ if(!id) {
     document.location.href = "/"
 }
 
-const itemUrl = url + "products/" + id;
+const itemUrl = baseUrl + "products/" + id;
 
 const form = document.querySelector("form")
 const title = document.querySelector(".name")

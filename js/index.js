@@ -3,7 +3,7 @@ import { createMenu } from "./components/createMenu.js";
 import { toggleProducts } from "./products/toggleProducts.js";
 import { logOutButton } from "./components/logOutBtn.js";
 
-const itemsUrl = baseUrl;
+const itemsUrl = baseUrl + "products";
 
 createMenu();
 
@@ -15,6 +15,7 @@ createMenu();
     try {
         const response = await fetch(itemsUrl);
         let result = await response.json();
+        console.log(result)
 
         function renderHtml() {
 

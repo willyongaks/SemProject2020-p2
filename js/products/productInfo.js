@@ -10,7 +10,7 @@ console.log(id)
 
 
 
-const url = `${ baseUrl }/${id}`;
+const url = `${ baseUrl + "products" }/${id}`;
 
 
 async function fetchProductInfo() {

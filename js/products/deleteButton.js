@@ -16,7 +16,7 @@ export function deleteButton(id) {
         const deleteItem = confirm( "Delete this product item from the list?");
 
         if(deleteItem) {
-            const url = baseUrl + "/" + id;
+            const url = baseUrl + "products/" + id;
 
             const token = getToken();
 
