@@ -31,7 +31,7 @@ createMenu();
                     <div class="products">
                      <a href="./productDetails.html?id=${item.id}" class="product_link">
                         <div class="image_section">
-                            <img src="http://localhost:4000${item.image.url}">
+                            <img src="http://localhost:1337${item.image.url}">
                         </a>
                             <div class="product_icons">
                                 <i class="bi bi-cart" data-id=${item.id} data-title=${item.title} data-image=${item.image.url} data-price=${item.price}></i>

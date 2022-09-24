@@ -1,4 +1,4 @@
-import { url } from "./settings/baseUrl.js";
+import { baseUrl } from "./settings/baseUrl.js";
 import { displayMessage } from "./components/logErrorMessage.js";
 import { saveToken, saveUser } from "./localStorage/loginStorage.js";
 import { createMenu } from "./components/createMenu.js";
@@ -33,7 +33,7 @@ function submitForm(event) {
 
 async function doLogin() {
     console.log(username.value)
-    const link = url + "auth/local";
+    const link = baseUrl + "auth/local";
 
     const formData = JSON.stringify({ identifier: username.value, password: password.value });
 

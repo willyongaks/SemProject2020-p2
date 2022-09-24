@@ -17,7 +17,7 @@ async function fetchProductInfo() {
     const response = await fetch(url);
     const result = await response.json();
 
-    const imageUrl = result.image ? `http://localhost:4000${result.image.url}` : result.image_url;
+    const imageUrl = result.image ? `http://localhost:1337${result.image.url}` : result.image_url;
 
     const featuredProductDetails = document.querySelector(".product_info");
 

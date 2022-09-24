@@ -16,6 +16,7 @@ featuredContainer.innerHTML += ` <div class="cart_header">
 
 
 favourites.forEach((item) => {
+
     console.log(item)
 
     featuredContainer.innerHTML += `

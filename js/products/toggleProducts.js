@@ -23,7 +23,7 @@ export function toggleProducts() {
         const title = this.dataset.title;
         const price = this.dataset.price;
         const image = this.dataset.image;
-
+        console.log("In Toggle Products")
         console.log(this.dataset)
 
         const currentFavs = getExistingFavs();

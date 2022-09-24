@@ -57,15 +57,20 @@ export function cartFunction() {
 
 
     function updateCartTotal() {
-        const cartContainer = document.querySelectorAll(".cart_products")[0]
-        const cartRows = cartContainer.querySelectorAll(".cart_row")
+        const cartRows = document.querySelectorAll(".cart_products")
+        console.log("In Update Cart Total")
+ //       console.log(cartRows)
+  
 
         let total = 0;
 
         for (let i = 0; i < cartRows.length; i++) {
+            
             const cartRow = cartRows[i]
-            const priceElement = cartRow.querySelectorAll(".product_price")[0]
-            const quantityElement = cartRow.querySelectorAll(".quantity")[0]
+            //console.log(cartRow)
+            const priceElement = cartRow.querySelector(".product_price")
+            console.log(priceElement)
+            const quantityElement = cartRow.querySelector(".quantity")
 
 
             const price = parseFloat(priceElement.innerText)

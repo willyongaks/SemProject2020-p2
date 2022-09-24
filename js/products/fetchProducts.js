@@ -16,13 +16,15 @@ export async function renderHtml() {
         const response = await fetch(itemsUrl);
         let result = await response.json();
 
-        console.log(result)
+
         featuredContainer.innerHTML = "";
 
         result.forEach(function (item) {
 
+            //            console.log(item)
+            var imageUrl = item.image ? `http://localhost:1337${item.image.url}` : item.image_url;
 
-            const imageUrl = item.image ? `http://localhost:4000${item.image.url}` : item.image_url;
+ //           console.log(imageUrl)
 
 
             featuredContainer.innerHTML += `

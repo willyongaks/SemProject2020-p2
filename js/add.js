@@ -1,6 +1,6 @@
  import { displayMessage } from "./components/logErrorMessage.js";
  import { getToken } from "./localStorage/loginStorage.js";
- import { url } from "./settings/baseUrl.js";
+ import { baseUrl } from "./settings/baseUrl.js";
  import { createMenu } from "./components/createMenu.js";
  import { logOutButton } from "./components/logOutBtn.js";
 
@@ -37,7 +37,7 @@ function submitForm(event) {
 }
 
 async function addProcuct(title, price, description, imageInput) {
-    const linkUrl = url + "products";
+    const linkUrl = baseUrl + "products";
 
 
     const data = JSON.stringify({ title: title, price: price, description: description, image_url: imageInput});

@@ -76,7 +76,7 @@ function submitForm(event) {
 
 async function updateProduct(title, price, description, imageInput) {
 
-    const urlLink = url + "products/" + id;
+    const urlLink = baseUrl + "products/" + id;
     const data = JSON.stringify({title: title, price: price, description: description, imageInput: imageInput});
 
     const token = getToken();
