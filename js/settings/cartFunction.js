@@ -1,4 +1,4 @@
-import { savefavs } from "../localStorage/saveToLocalStorage.js";
+
 export function cartFunction() {
 
     if (document.readyState == "loading") {

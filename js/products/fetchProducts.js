@@ -62,6 +62,15 @@ const itemsUrl = baseUrl + "products";
             result = filteredItems;
             renderHtml();
 
+            function RefreshPage() {
+                setTimeout(function () {
+                    if (searchValue === "") {
+                        window.location.reload();
+                    }
+                }, 1);
+            };
+
+            RefreshPage()
 
         }
     }
