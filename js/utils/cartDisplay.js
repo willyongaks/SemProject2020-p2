@@ -7,6 +7,8 @@ import { logOutButton } from "../components/logOutBtn.js";
 const favourites = getExistingFavs();
 
 
+
+
 const featuredContainer = document.querySelector(".cart_container");
 
 
@@ -14,8 +16,12 @@ featuredContainer.innerHTML += ` <div class="cart_header">
             <h4>Shopping cart</h4>
         </div> `
 
-
+if (favourites.length === 0) {
+        featuredContainer.innerHTML += "Yo do dont have any products on the cart."
+    }
 favourites.forEach((item) => {
+
+    
 
     console.log(item)
 

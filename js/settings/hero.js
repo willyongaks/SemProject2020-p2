@@ -1,7 +1,7 @@
-import { url } from "./baseUrl.js";
+import { baseUrl } from "./baseUrl.js";
 
 
-const link = `${url}/${home}`;
+const link =  baseUrl + "home";
 
 
 export async function heroImage() {
@@ -12,13 +12,11 @@ export async function heroImage() {
         const response = await fetch(link);
         let result = await response.json();
 
-        function renderHtml() {
-
-            heroContainer.innerHTML += `<a href="./productDetails.html?id=${result.id}" class="product_link">`
-        }
+        heroContainer.innerHTML = `<img src="http://localhost:4000${result.hero_banner.url}">`
+       
     }
 
     catch(error){
 
     }
-}heroImage()
+}

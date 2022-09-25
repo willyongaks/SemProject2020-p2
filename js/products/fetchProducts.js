@@ -21,10 +21,10 @@ export async function renderHtml() {
 
         result.forEach(function (item) {
 
-            //            console.log(item)
-            var imageUrl = item.image ? `http://localhost:1337${item.image.url}` : item.image_url;
+            // console.log(item)
+            var imageUrl = item.image ? `http://localhost:4000${item.image.url}` : item.image_url;
 
- //           console.log(imageUrl)
+
 
 
             featuredContainer.innerHTML += `
@@ -43,8 +43,11 @@ export async function renderHtml() {
             </div>`
 
         });
-        filteredProducts(result);
         toggleProducts();
+        filteredProducts(result)
+        
+        
+        
     }
     catch (error) {
         console.log(error)
@@ -53,7 +56,7 @@ export async function renderHtml() {
 
 
 
-
 };
+
 renderHtml();
 logOutButton();
